@@ -5,6 +5,19 @@ namespace Assignment
 {
     internal class Program
     {
+        static bool IsPalindrome(string str)
+        {
+            bool flag = false;
+            int size = (str.Length - 1) / 2;
+            if (!string.IsNullOrEmpty(str))
+            {
+                for (int i = 0; i < size; i++)
+                {
+                    flag = str[i] == str[str.Length - i - 1];
+                }
+            }
+            return flag;
+        }
         static int Greater(int[] arr, int value)
         {
             int count = 0;
@@ -182,6 +195,29 @@ namespace Assignment
             //} 
             #endregion
 
+            #region Q2
+            //int arrSize;
+            //do
+            //{
+            //    Console.Write("Enter the Size Of Array: ");
+            //} while (!int.TryParse(Console.ReadLine(), out arrSize) || arrSize <= 0);
+            
+            //int[] arr = new int[arrSize];
+            
+            //for (int i = 0; i < arrSize; i++)
+            //{
+            //    do
+            //    {
+            //        Console.Write($"Enter the Array Number({i + 1}): ");
+            //    } while (!int.TryParse(Console.ReadLine(), out arr[i]));
+            //}
+            
+            //if (IsPalindrome(string.Join("", arr)))
+            //    Console.WriteLine("Numbers is Palindrome");
+            //else
+            //    Console.WriteLine("Numbers is not Palindrome"); 
+            #endregion
+                
             #region Q3
             //Queue<int> items = new Queue<int>();
             //int num;
